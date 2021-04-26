@@ -1,0 +1,25 @@
+.info-shares {}
+
+.info-shares .info {}
+
+.info-shares .info li {
+  flex: 0 0 33%;
+  padding: 10px 5px;
+  font-size: 13px;
+}
+
+.info-shares .info li .title {
+  color: #888;
+}
+
+.info-shares .info li .quty {
+  font-weight: 500;
+}
+
+[nz-carousel-content] {
+  height: 160px;
+  line-height: 160px;
+  background: #ffff;
+  color: rgb(3, 3, 3);
+
+}

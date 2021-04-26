@@ -1,0 +1,61 @@
+<section class=" pt-4 px-lg-0">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+
+        <div class=" bg-white rounded shadow mb-5">
+          <div class="head-box d-flex flex-wrap align-items-center p-3">
+            <h3 class="title-main">
+              User Lists
+            </h3>
+          </div>
+          <div class="body-box p-3">
+            <div class="table-responsive">
+              <table class="table table-simple">
+                <thead>
+                  <tr class="text-orang">
+                    <td>number </td>
+                    <td>title</td>
+                    <td>description</td>
+                    <td>image</td>
+                    <td>detail</td>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let userList of paginatedUsersLists; let i = index">
+                    <td>{{userList.id}}</td>
+                    <td>{{userList.title}}</td>
+                    <td>{{userList.description}}</td>
+                    <td> <img [src]="userList.image" width="70px" class="box rounded mx-auto d-block img-responsive">
+                    </td>
+                    <td>
+                      <a [routerLink]="['/user-profile']" [queryParams]="{id: userList.id}"
+                        class="fa fa-line-chart align-items-center cursor-pointer">
+                        <img src="assets/img/user-lists/search-outline.svg" [routerLink]="['/user-profile']"
+                          [queryParams]="{id: userList.id}"
+                          class="image-rotate align-items-center py-4 ml-2 mr-2 cursor-pointer " alt="">
+                      </a>
+                    </td>
+                  </tr>
+
+                </tbody>
+              </table>
+              <div class=" px-0 mt-3" *ngIf="paginatedUsersLists && paginatedUsersLists.length>0">
+                <!-- <ngb-pagination (pageChange)="pageChange($event)" [(page)]="page" [boundaryLinks]="false"
+                [pageSize]="pageSize" [collectionSize]="totalCount" [directionLinks]="false" [maxSize]="3"
+                [rotate]="true"></ngb-pagination> -->
+                <nz-pagination [nzPageIndex]="1" [nzTotal]="totalCount" (nzPageIndexChange)="pageChange($event)"
+                  [nzPageSize]="pageSize" [nzResponsive]="true"></nz-pagination>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <ngx-loading [show]="loading"
+        [config]="{animationType: ngxLoadingAnimationTypes.circleSwish, backdropBorderRadius: '3px'}">
+      </ngx-loading>
+    </div>
+  </div>
+</section>

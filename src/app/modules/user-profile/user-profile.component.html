@@ -1,0 +1,76 @@
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-11">
+        <div class="d-md-flex justify-content-between align-items-center">
+          <h3 class="title-simple  mb-2">
+            Profile
+          </h3>
+          <ul class="breadcrumb breadcrumb-list mb-2">
+            <li class="breadcrumb-item">
+              <a [routerLink]="['/']" routerLinkActive="router-link-active">
+                Home
+              </a>
+            </li>
+            <img src="assets/img/user-lists/leftArrow.svg" class="image-rotate ml-2 mr-2" alt="">
+            <li class="breadcrumb-item">
+              <span>
+                profile
+              </span>
+            </li>
+          </ul>
+        </div>
+        <div class="box-simple rounded-14 bg-white mb-4">
+          <div class="head-box d-flex flex-wrap justify-content-between align-items-center border-bottom p-3">
+            <h3 class="title-main">
+              userInfo
+            </h3>
+          </div>
+
+          <div class="body-box">
+
+            <div class="body-box p-3">
+              <!-- <div class="row"> -->
+              <div class="col-12">
+                <div class="info-shares mb-3">
+                  <ul class="info d-flex flex-wrap">
+                    <li>
+                      <span class="title">status :</span>
+                      <span class=" quty text-red px-3" *ngIf="profileForm.online == false">ofine</span>
+                      <span class=" quty text-green px-3" *ngIf="profileForm.online == true">online</span>
+                    </li>
+                    <li>
+                      <span class="title ">title :</span>
+                      <span class=" quty  px-3" *ngIf="profileForm">{{profileForm!.title}}</span>
+                    </li>
+                    <li class="w-100">
+                      <span class="title  ">description :</span>
+                      <span class=" quty  px-3" *ngIf="profileForm">{{profileForm['description']}}</span>
+                    </li>
+
+                  </ul>
+                </div>
+                <div class="col-10 align-items-center">
+                  <nz-carousel nzAutoPlay>
+                    <div nz-carousel-content *ngFor="let image of profileForm.images">
+                      <img [src]="image" width="50%" height="160px" class="box rounded mx-auto d-block img-responsive">
+                    </div>
+                  </nz-carousel>
+                </div>
+                <div class="buttons d-flex justify-content-start flex-wrap mt-5">
+                  <button nz-button nzType="primary" [routerLink]="['/']" routerLinkActive="router-link-active">Go To
+                    User List</button>
+                </div>
+              </div>
+              <!-- </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <ngx-loading [show]="loading"
+        [config]="{animationType: ngxLoadingAnimationTypes.circleSwish, backdropBorderRadius: '3px'}">
+      </ngx-loading>
+    </div>
+  </div>
+
+</section>
