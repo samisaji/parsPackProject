@@ -46,7 +46,7 @@ export class UserListsComponent implements OnInit {
   getUserList(): void {
     this.loading = true;
     this.userListService.getUserList().subscribe(res => {
-      debugger
+      
       this.loading = false;
       this.userLists = res;
 
@@ -67,7 +67,7 @@ export class UserListsComponent implements OnInit {
   }
 
   pageChange(page: number): void {
-    debugger
+    
     this.page = +page;
     this.updateQueryParams();
     window.scrollTo({

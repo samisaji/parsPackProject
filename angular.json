@@ -36,7 +36,8 @@
             "styles": [
               "src/theme.less",
               "src/styles.scss",
-              "node_modules/bootstrap/dist/css/bootstrap.css"
+              "node_modules/bootstrap/dist/css/bootstrap.css",
+              "src/assets/css/appCss.css"
             ],
             "scripts": [
               "node_modules/jQuery/dist/jquery.min.js",

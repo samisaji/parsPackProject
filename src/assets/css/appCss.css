@@ -1,0 +1,118 @@
+body {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  color: #4B566F;
+  font-size: 14px;
+  overflow-x: hidden;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+a {
+  cursor: pointer;
+  transition: .3s;
+  color: #4B566F;
+  text-decoration: none !important;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #2cadf8d8;
+}
+
+/*-------------*/
+.text-blue {
+  color: #2cadf8d8;
+}
+
+.text-green {
+  color: #1CD1A1;
+}
+
+.rounded-14 {
+  border-radius: 14px
+}
+
+.text-red {
+  color: #FF4B4B
+}
+
+
+.title-simple {
+  font-size: 16px;
+  word-spacing: -3px;
+}
+
+/*-------------*/
+.box-simple {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.title-main {
+  font-size: 16px;
+}
+
+/*-------------*/
+
+.breadcrumb-list {
+  padding: 0;
+  background: transparent;
+}
+
+.breadcrumb-list .breadcrumb-item {
+  font-size: 12px;
+  position: relative;
+  padding: 5px 10px;
+}
+
+.breadcrumb-list .breadcrumb-item+.breadcrumb-item:before {
+  content: "\f100";
+  font-weight: bold;
+  position: absolute;
+  right: -4px;
+  margin: 0;
+  padding: 0;
+  color: #aaa;
+  top: 6px;
+}
+
+.breadcrumb-list .breadcrumb-item a {
+  color: #aaa;
+}
+
+.breadcrumb-list .breadcrumb-item a:hover {
+  color: #2cadf8d8;
+}
+
+
+/*-------------*/
+.table-simple {
+  color: #646D80;
+}
+
+.table-simple td {
+  text-align: center;
+  vertical-align: middle;
+  border: 0;
+}
+
+.table-simple thead {
+  background: #F7F8FA;
+}
+
+.table-simple .btn {
+  min-width: 80px;
+  min-height: auto;
+  padding: 3px;
+}
+
+/*-------------*/
+@media(max-width:992px) {
+  .container {
+    max-width: 100%
+  }
+
+}
